@@ -1,3 +1,5 @@
+package hello;
+
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -7,11 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by long on 2017/4/24.
  */
-@Controller
-@EnableAutoConfiguration
+@RestController
 public class HelloController {
     @RequestMapping("/user/get_verify_code")
-    @ResponseBody
     public String greeting() {
         return "{\n" +
                 "\t\"status\": 0,\n" +
@@ -21,7 +21,6 @@ public class HelloController {
     }
 
     @RequestMapping("/")
-    @ResponseBody
     public String second() {
         return "{\n" +
                 "\t\"status\": 0,\n" +
