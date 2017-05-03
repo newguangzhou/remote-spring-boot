@@ -1,8 +1,10 @@
 package hello;
 
+import com.xiaomi.xmpush.server.Constants;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import push.PushManagerInstance;
 
 import java.util.Arrays;
 
@@ -19,5 +21,12 @@ public class Application {
         for (String beanName : beanNames) {
             System.out.println(beanName);
         }
+
+        try {
+            PushManagerInstance.getInstance().sendMessage();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
