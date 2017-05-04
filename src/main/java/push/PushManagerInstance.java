@@ -55,7 +55,7 @@ public class PushManagerInstance {
     public void sendMessage() throws Exception {
         Constants.useOfficial();
         Sender sender = new Sender("aQLLX8h129sPKm3NeY9lcA==");
-        Result result=sender.send(buildTargetedMessage(), 0); //根据regID，发送消息到指定设备上，不重试。
+        Result result=sender.sendToAlias(buildMessage(), "1493785488",0); //根据regID，发送消息到指定设备上，不重试。
         System.out.println(("Server response: "+"MessageId: " + result.getMessageId()
                 + " ErrorCode: " + result.getErrorCode().toString()
                 + " Reason: " + result.getReason()));
