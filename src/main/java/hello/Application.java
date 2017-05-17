@@ -19,14 +19,14 @@ public class Application {
         String[] beanNames = ctx.getBeanDefinitionNames();
         Arrays.sort(beanNames);
         for (String beanName : beanNames) {
-            System.out.println(beanName);
+            System.out.println("aaaaaaa---"+beanName);
         }
-
-        try {
-            PushManagerInstance.getInstance().sendMessage();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//
+//        try {
+//            PushManagerInstance.getInstance().sendMessage();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
     }
 }
